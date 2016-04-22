@@ -18,7 +18,7 @@
 当前推送退到后台的，很多机型存在不稳定的问题,android6.0以后，推出了[Doze模式] [1]，后台推送的权限进一步收紧。国内存在众多的自定义rom，会对后台的推送进程进行强杀。（MIUI，魅族等友商）
 
 在Doze Mode下，网络访问被屏蔽，维持唤醒（Wake Lock）被忽略，定时任务（Alarm）被推迟（以指数递增的后延），但不会杀进程。也就是说后台进程就啥都别想干了，">
-<meta property="og:updated_time" content="2016-04-22T13:14:01.000Z">
+<meta property="og:updated_time" content="2016-04-22T13:15:43.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="android push调研">
 <meta name="twitter:description" content="项目现状：
@@ -205,7 +205,8 @@
 <h3 id="预计工时">预计工时</h3>
 <p>[JobSchedule] [2]和[Doze模式] [1]的方案是针对android系统正规方案，预计会花费<strong>1周左右</strong>的工作时间，android应用优化的方案是针对整个团队的，包括应用后台以后，webview的资源释放，图片资源的释放等一系列的优化方案，这个时间上不好预估。但是应该需要持续去做。native层进程监听保活的话，更多是时间比较空闲的时候，去跟进调研，预计时间<strong>一周</strong>，优先级可以放低。</p>
 <h3 id="结论">结论</h3>
-<p>在GCM没有办法进入国内的现阶段，应用尽量做到内存使用和电量损耗最小化，使进程被杀的概率尽量降低。针对小米的机器只能依赖于MiPush，能提供一个相对稳定的推送环境, [1]: http://blog.csdn.net/aa20616012/article/details/49781875<br>
+<p>在GCM没有办法进入国内的现阶段，应用尽量做到内存使用和电量损耗最小化，使进程被杀的概率尽量降低。针对小米的机器只能依赖于MiPush，能提供一个相对稳定的推送环境<br>
+[1]: http://blog.csdn.net/aa20616012/article/details/49781875<br>
 [2]: http://blog.csdn.net/bboyfeiyu/article/details/44809395<br>
 [3]: https://github.com/lzhAndroid/MarsDaemon</p>
 
