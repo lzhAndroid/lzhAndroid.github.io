@@ -6,22 +6,25 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <title>android push调研 | Mr.Monkey&#39;s Pages</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="项目现状：当前推送退到后台的，很多机型存在不稳定的问题,android6.0以后，推出了Doze模式，后台推送的权限进一步收紧。国内存在众多的自定义rom，会对后台的推送进程进行强杀。（MIUI，魅族等友商）
+  <meta name="description" content="项目现状：
+当前推送退到后台的，很多机型存在不稳定的问题,android6.0以后，推出了[Doze模式] [1]，后台推送的权限进一步收紧。国内存在众多的自定义rom，会对后台的推送进程进行强杀。（MIUI，魅族等友商）
 
-在Doze Mode下，网络访问被屏蔽，维持唤醒（Wake Lock）被忽略，定时任务（Alarm）被推迟（以指数递增的后延），但不会杀进程。也就是说后台进程就啥都别想干了，乖乖躺着吧，p">
+在Doze Mode下，网络访问被屏蔽，维持唤醒（Wake Lock）被忽略，定时任务（Alarm）被推迟（以指数递增的后延），但不会杀进程。也就是说后台进程就啥都别想干了，">
 <meta property="og:type" content="article">
 <meta property="og:title" content="android push调研">
 <meta property="og:url" content="http://yoursite.com/2016/04/22/android-push调研/index.html">
 <meta property="og:site_name" content="Mr.Monkey's Pages">
-<meta property="og:description" content="项目现状：当前推送退到后台的，很多机型存在不稳定的问题,android6.0以后，推出了Doze模式，后台推送的权限进一步收紧。国内存在众多的自定义rom，会对后台的推送进程进行强杀。（MIUI，魅族等友商）
+<meta property="og:description" content="项目现状：
+当前推送退到后台的，很多机型存在不稳定的问题,android6.0以后，推出了[Doze模式] [1]，后台推送的权限进一步收紧。国内存在众多的自定义rom，会对后台的推送进程进行强杀。（MIUI，魅族等友商）
 
-在Doze Mode下，网络访问被屏蔽，维持唤醒（Wake Lock）被忽略，定时任务（Alarm）被推迟（以指数递增的后延），但不会杀进程。也就是说后台进程就啥都别想干了，乖乖躺着吧，p">
+在Doze Mode下，网络访问被屏蔽，维持唤醒（Wake Lock）被忽略，定时任务（Alarm）被推迟（以指数递增的后延），但不会杀进程。也就是说后台进程就啥都别想干了，">
 <meta property="og:updated_time" content="2016-04-22T14:58:12.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="android push调研">
-<meta name="twitter:description" content="项目现状：当前推送退到后台的，很多机型存在不稳定的问题,android6.0以后，推出了Doze模式，后台推送的权限进一步收紧。国内存在众多的自定义rom，会对后台的推送进程进行强杀。（MIUI，魅族等友商）
+<meta name="twitter:description" content="项目现状：
+当前推送退到后台的，很多机型存在不稳定的问题,android6.0以后，推出了[Doze模式] [1]，后台推送的权限进一步收紧。国内存在众多的自定义rom，会对后台的推送进程进行强杀。（MIUI，魅族等友商）
 
-在Doze Mode下，网络访问被屏蔽，维持唤醒（Wake Lock）被忽略，定时任务（Alarm）被推迟（以指数递增的后延），但不会杀进程。也就是说后台进程就啥都别想干了，乖乖躺着吧，p">
+在Doze Mode下，网络访问被屏蔽，维持唤醒（Wake Lock）被忽略，定时任务（Alarm）被推迟（以指数递增的后延），但不会杀进程。也就是说后台进程就啥都别想干了，">
   
     <link rel="alternative" href="/atom.xml" title="Mr.Monkey&#39;s Pages" type="application/atom+xml">
   
@@ -190,19 +193,23 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="项目现状："><a href="#项目现状：" class="headerlink" title="项目现状："></a>项目现状：</h3><p>当前推送退到后台的，很多机型存在不稳定的问题,android6.0以后，推出了<a href="http://blog.csdn.net/aa20616012/article/details/49781875" target="_blank" rel="external">Doze模式</a>，后台推送的权限进一步收紧。国内存在众多的自定义rom，会对后台的推送进程进行强杀。（MIUI，魅族等友商）</p>
+        <h3 id="项目现状">项目现状：</h3>
+<p>当前推送退到后台的，很多机型存在不稳定的问题,android6.0以后，推出了[Doze模式] [1]，后台推送的权限进一步收紧。国内存在众多的自定义rom，会对后台的推送进程进行强杀。（MIUI，魅族等友商）</p>
 <blockquote>
 <p>在Doze Mode下，网络访问被屏蔽，维持唤醒（Wake Lock）被忽略，定时任务（Alarm）被推迟（以指数递增的后延），但不会杀进程。也就是说后台进程就啥都别想干了，乖乖躺着吧，push通道不可避免的会断掉。这次Google动真格的一点是，对所有应用，无视『目标版本（Target SDK Version）』全部生效，除了用户在设置中主动赦免的app以及Google自家的Play services和Play Store。（Google很贱的不让你剥夺这俩的赦免）</p>
 </blockquote>
-<h3 id="优化方向"><a href="#优化方向" class="headerlink" title="优化方向"></a>优化方向</h3><p>暂时没有发现可靠的第三方库能对android的后台push有很好的保护，根据官方文档，有以下几种方案可以在一定程度上对push的送达率有优化作用  </p>
-<ul>
-<li>android5.0以后，建议使用<a href="http://blog.csdn.net/bboyfeiyu/article/details/44809395" target="_blank" rel="external">JobSchedlue</a>进行后台任务的优化，通过更好的任务触发机制，降低应用耗电,降低被回收的概率  </li>
-<li>针对android6.0的<a href="http://blog.csdn.net/aa20616012/article/details/49781875" target="_blank" rel="external">Doze模式</a>,应用可以声明 REQUEST_IGNORE_BATTERY_OPTIMIZATIONS 权限，并主动要求用户将其加入至白名单中，从而不受Doze<br>Mode和App Standby的影响。  </li>
-<li>对现有的android应用做优化，减少后台时候的内存占用，尽可能的降低被android进程回收的优先级 </li>
-<li>通过native层搭建管道，监听进程状态，实现保活（非官方，短时间的调研过，效果不理想）<a href="https://github.com/lzhAndroid/MarsDaemon" target="_blank" rel="external">MarsDaemon</a>参考项目  </li>
-</ul>
-<h3 id="预计工时"><a href="#预计工时" class="headerlink" title="预计工时"></a>预计工时</h3><p><a href="http://blog.csdn.net/bboyfeiyu/article/details/44809395" target="_blank" rel="external">JobSchedule</a>和<a href="http://blog.csdn.net/aa20616012/article/details/49781875" target="_blank" rel="external">Doze模式</a>的方案是针对android系统正规方案，预计会花费<strong>1周左右</strong>的工作时间，android应用优化的方案是针对整个团队的，包括应用后台以后，webview的资源释放，图片资源的释放等一系列的优化方案，这个时间上不好预估。但是应该需要持续去做。native层进程监听保活的话，更多是时间比较空闲的时候，去跟进调研，预计时间<strong>一周</strong>，优先级可以放低。</p>
-<h3 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h3><p>在GCM没有办法进入国内的现阶段，应用尽量做到内存使用和电量损耗最小化，使进程被杀的概率尽量降低。针对小米的机器只能依赖于MiPush，能提供一个相对稳定的推送环境  </p>
+<h3 id="优化方向">优化方向</h3>
+<p>暂时没有发现可靠的第三方库能对android的后台push有很好的保护，根据官方文档，有以下几种方案可以在一定程度上对push的送达率有优化作用<br>
+- android5.0以后，建议使用[JobSchedlue] [2]进行后台任务的优化，通过更好的任务触发机制，降低应用耗电,降低被回收的概率<br>
+- 针对android6.0的[Doze模式] [1],应用可以声明 REQUEST_IGNORE_BATTERY_OPTIMIZATIONS 权限，并主动要求用户将其加入至白名单中，从而不受Doze Mode和App Standby的影响。<br>
+- 对现有的android应用做优化，减少后台时候的内存占用，尽可能的降低被android进程回收的优先级 - 通过native层搭建管道，监听进程状态，实现保活（非官方，短时间的调研过，效果不理想）[MarsDaemon] [3]参考项目</p>
+<h3 id="预计工时">预计工时</h3>
+<p>[JobSchedule] [2]和[Doze模式] [1]的方案是针对android系统正规方案，预计会花费<strong>1周左右</strong>的工作时间，android应用优化的方案是针对整个团队的，包括应用后台以后，webview的资源释放，图片资源的释放等一系列的优化方案，这个时间上不好预估。但是应该需要持续去做。native层进程监听保活的话，更多是时间比较空闲的时候，去跟进调研，预计时间<strong>一周</strong>，优先级可以放低。</p>
+<h3 id="结论">结论</h3>
+<p>在GCM没有办法进入国内的现阶段，应用尽量做到内存使用和电量损耗最小化，使进程被杀的概率尽量降低。针对小米的机器只能依赖于MiPush，能提供一个相对稳定的推送环境<br>
+[1]: http://blog.csdn.net/aa20616012/article/details/49781875<br>
+[2]: http://blog.csdn.net/bboyfeiyu/article/details/44809395<br>
+[3]: https://github.com/lzhAndroid/MarsDaemon</p>
 
       
     </div>
